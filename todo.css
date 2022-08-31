@@ -1,0 +1,90 @@
+@media screen and (max-width: 590px) {
+   #todoHeader{
+    position: absolute;
+    top: 1%;
+    
+    
+   }
+   
+  
+   #doneHeader{
+    position: absolute;
+    top: 1%;
+    right: 5%;
+    
+   }
+
+   #btToggleDone{
+    position: absolute;
+    top: 1%;
+    
+
+   }
+}
+
+@media screen and (max-width: 490px) {
+  #buttonGroup{
+    
+    display: block;
+  }
+  #btDone{
+    width: 80%;
+    text-size-adjust:inherit;
+    display: block;
+    height: 120%;
+  }
+}
+
+body {
+  background-color: wheat;
+}
+
+h1 {
+  text-align: center;
+  bottom: 0%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  margin-bottom: 0%;
+}
+footer {
+  text-align: right;
+}
+
+#btToggleDone {
+  width: 40px !important;
+  left: 50%;
+  position: absolute;
+}
+
+/* #doneHeader{
+    position:static;
+}
+
+#doneColumn{
+    position: static;
+} */
+
+#deadlinePicker,
+#lbDeadlinePicker,
+#editDeadlinePicker,
+#lbEditDeadlinePicker {
+  display: none;
+}
+/* .toast{
+    margin-top: 150px !important;
+} */
+/* 
+#buttonGroup{
+    position: sticky  !important;
+} */
+
+#doneBody .toast {
+  background-color: rgb(81, 152, 114) !important;
+}
+
+#buttonGroup{
+    width: 100%;
+}
+#btnAdd{
+    background-color: #89BD9E ;
+}
