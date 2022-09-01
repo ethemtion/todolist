@@ -1,6 +1,7 @@
 let toggleBtCounter = 0;
 
 $(document).ready(function () {
+  hintModal();
   get();
   store();
   addTooltip();
@@ -161,6 +162,7 @@ function btNewToDo() {
     let minutes = toDoDate.getMinutes();
 
     if (minutes <= 9) minutes = "0" + minutes;
+    if (day <= 9) day = "0" + day;
     if (month <= 9) month = "0" + month;
     if (hours <= 9) hours = "0" + hours;
 
@@ -401,7 +403,6 @@ function showRemaining() {
     --month;
     let year = footersText.slice(15);
 
-    // console.log(year, month, day, hours, minutes);
     const date = new Date(year, month, day, hours, minutes);
 
     let dateMS = date.valueOf();
@@ -409,7 +410,6 @@ function showRemaining() {
     let currentDateMS = currentDate.valueOf();
 
     let remainingMS = dateMS - currentDateMS;
-
     footerString = calculateRemaining(remainingMS);
     if (deadlineNearFlag == true) {
       $(footers[i]).css("color", "red");
@@ -452,7 +452,7 @@ function calculateRemaining(remainingMS) {
   if (hours != 0) footerString += hours + " hours ";
   if (minutes != 0) footerString += minutes + " minutes ";
 
-  if (day <= 0 && hours <= 2) {
+  if (day <= 0 && hours < 2) {
     deadlineNearFlag = true;
   } else {
     deadlineNearFlag = false;
@@ -471,4 +471,20 @@ function addTooltip() {
     });
     $(footers[i]).tooltip("hide");
   }
+}
+
+let dontShowFlag = false
+function hintModal(){
+  let dontShowFlag = localStorage.getItem('dontShowFlag')
+  if(!dontShowFlag){
+  const myModalAlternative = new bootstrap.Modal('#staticBackdrop', "focus")
+  const modalToggle = $("#statickBackdrop")
+  myModalAlternative.show(modalToggle)
+}
+}
+
+function dontShowAgain(){
+  dontShowFlag = true
+  localStorage.setItem ("dontShowFlag", dontShowFlag)
+ 
 }

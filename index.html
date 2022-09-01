@@ -308,5 +308,41 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">TO:DO LIST HINT</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <dl class="row">
+              <dt class="col-sm-3">ADD</dt>
+              <dd class="col-sm-9">Add new data with properties</dd>
+
+              <dt class="col-sm-3">EDIT</dt>
+              <dd class="col-sm-9">Edit your TO:DO</dd>
+
+              <dt class="col-sm-3">DELETE</dt>
+              <dd class="col-sm-9">Delete your TO:DO's</dd>
+              
+              <dt class="col-sm-3">MARK DONE / UNDONE</dt>
+              <dd class="col-sm-9">Mark your TO:DO's as done or undone</dd>
+
+              <dt class="col-sm-3">Remaining Time</dt>
+              <dd class="col-sm-9">Hover or click on the time in the TO:DO to see remaining time</dd>
+
+              <dd class="col-sm-12">Color of TO:DO's with deadline of 2 hours or less will shown as red. You can use arrow button to hide done section.</dd>
+            </dl>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Skip</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="dontShowAgain()">Don't show again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
